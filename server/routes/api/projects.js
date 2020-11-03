@@ -1,10 +1,9 @@
 const express = require('express');
-const mongodb = require('mongodb');
+const projectsController = require('../../../controllers/projectsController');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('HELLO');
-});
+router.route('/')
+    .get(projectsController.findAll);
 
 module.exports = router;
