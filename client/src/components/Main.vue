@@ -17,14 +17,13 @@
         <h1 class="header">we're glad you're here.</h1>
       </div>
     <!-- </div> -->
-    <div class="right"></div>
+    <div class="right">2</div>
   </div>
 </template>
 
 <script>
-// import carImage from '../assets/defender.jpg';
 export default {
-  name: "Test",
+  name: "Main",
 };
 </script>
 
@@ -60,8 +59,8 @@ export default {
 }
 
 .main-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .gallery-controls {

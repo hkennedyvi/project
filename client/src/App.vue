@@ -3,19 +3,22 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
-    <Test />
+    <Main />
+    <Mid />
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue';
-import Test from './components/Test.vue';
+import Main from './components/Main.vue';
+import Mid from './components/Mid.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
-    Test
+    Main,
+    Mid
   }
 }
 </script>
