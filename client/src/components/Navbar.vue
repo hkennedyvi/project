@@ -1,16 +1,16 @@
 <template>
   <nav class="navbar">
     <ul class="nav-list">
-      <button v-bind:class="[isOpen ? 'open' : 'closed']" v-on:click="toggleNav">
+      <button v-bind:class="[isOpen ? 'button-open' : 'button-close', 'button']" v-on:click="toggleNav">
         <i class="fas fa-chevron-circle-down"></i>
       </button>
-      <li>
+      <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close']">
         <a href>Here</a>
       </li>
-      <li>
+      <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close']">
         <a href>There</a>
       </li>
-      <li>
+      <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close']">
         <a href>Anywhere</a>
       </li>
     </ul>
@@ -36,18 +36,27 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .navbar {
-  background: white;
+  background: transparent;
   position: fixed;
   top: 3rem;
   right: 3rem;
 }
 
-.open {
+.button {
+   background: transparent;
+   border: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button-open {
   color: blue;
   transition: 500ms ease-in;
 }
 
-.closed {
+.button-close {
   color: red;
   transform: rotate(-180deg);
   transition: 500ms ease-in;
@@ -55,6 +64,28 @@ export default {
 
 .nav-list {
   list-style: none;
-  line-height: 2rem;
+  /* line-height: 1.5rem; */
 }
+
+.nav-list a {
+    text-decoration: none;
+}
+
+.nav-list a:visited {
+    color: inherit;
+}
+
+.nav-item-open {
+    transition: 500ms ease-in;
+    line-height: 1.5rem;
+    color: white;
+
+}
+
+.nav-item-close {
+    visibility: hidden;
+    line-height: 15rem;
+    transition: 500ms ease-in;
+}
+
 </style>

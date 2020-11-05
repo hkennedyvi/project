@@ -3,15 +3,26 @@
     <div class="left">1</div>
     <div class="float-box">
       <div class="pic-box">
-
+        <img class="main-image" src="../assets/defender.jpg" />
       </div>
-      <h1 class="header">we're glad you're here.</h1>
-    </div>
+      <!-- <div> -->
+        <div class="gallery-controls">
+          <button>
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <h1 class="header">we're glad you're here.</h1>
+      </div>
+    <!-- </div> -->
     <div class="right"></div>
   </div>
 </template>
 
 <script>
+// import carImage from '../assets/defender.jpg';
 export default {
   name: "Test",
 };
@@ -46,6 +57,33 @@ export default {
 .pic-box {
   border: solid 1px black;
   width: 50%;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-controls {
+  width: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.gallery-controls button {
+  border: none;
+  background: none;
+  font-size: 3rem;
+}
+
+.gallery-controls button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-controls button:focus {
+  outline: none;
 }
 
 .header {
