@@ -2,19 +2,19 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <!-- <Navbar /> -->
+    <Navbar />
     <Test />
   </div>
 </template>
 
 <script>
-// import Navbar from './components/Navbar.vue';
+import Navbar from './components/Navbar.vue';
 import Test from './components/Test.vue';
 
 export default {
   name: 'App',
   components: {
-    // Navbar,
+    Navbar,
     Test
   }
 }
@@ -22,9 +22,11 @@ export default {
 
 <style>
 #app {
+  background: red;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  background: white;
 }
 
 </style>

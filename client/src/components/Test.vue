@@ -24,7 +24,7 @@ export default {
   padding: 0;
   display: flex;
   height: 100vh;
-  background: lightslategrey;
+  /* background: lightslategrey; */
 }
 
 .left {
