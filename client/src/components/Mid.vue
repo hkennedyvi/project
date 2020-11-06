@@ -62,7 +62,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .mid-container {
-  background: grey;
+  background: rgb(226, 226, 226);
   margin: 0;
   padding: 5rem 0;
 }
@@ -80,7 +80,7 @@ export default {
 }
 
 .card {
-  border: black solid 1px;
+  /* border: black solid 1px; */
   width: 20rem;
   height: 50rem;
   margin: 1rem;

@@ -24,6 +24,11 @@
 <script>
 export default {
   name: "Main",
+  data() {
+    return {
+      image : '../assets/defender.jpg'
+    };
+  }
 };
 </script>
 
@@ -46,7 +51,7 @@ export default {
 .float-box {
   height: 60%;
   width: 70%;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   position: absolute;
   left: 20%;
   top: 20%;
@@ -54,7 +59,7 @@ export default {
 }
 
 .pic-box {
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 50%;
 }
 
@@ -91,7 +96,7 @@ export default {
 }
 
 .right {
-  background: orange;
+  background: rgb(105, 105, 105);
   flex: 2;
 }
 </style>
