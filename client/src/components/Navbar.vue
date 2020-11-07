@@ -25,7 +25,7 @@ export default {
   name: "Navbar",
   data: () => {
     return {
-      isOpen: true,
+      isOpen: false,
     };
   },
   methods: {
@@ -48,6 +48,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   border-radius: 1em;
+  z-index: 1;
 }
 
 .navbar-open {
