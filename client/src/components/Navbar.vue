@@ -67,6 +67,10 @@ export default {
   font-size: 2rem;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 .button:focus {
   outline: none;
 }

@@ -1,14 +1,15 @@
 <template>
   <div class="mid-container">
-    <div class="mid-header">
-      <h1>MID PAGE</h1>
-    </div>
+    <!-- <div class="mid-headers"> -->
+      <h1 class="mid-header">DESIGN FOR THE LONG HAUL</h1>
+      <h2 class="mid-sub-header">(Our Promise to You)</h2>
+    <!-- </div> -->
     <div class="cards-container">
       <div class="card">
         <div class="card-number">01</div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Stylish</h2>
+          <h2 class="card-sub-header">Safety</h2>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -23,7 +24,7 @@
         <div class="card-number">02</div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Stylish</h2>
+          <h2 class="card-sub-header">Style</h2>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -38,7 +39,7 @@
         <div class="card-number">03</div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Stylish</h2>
+          <h2 class="card-sub-header">Speed</h2>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -64,12 +65,22 @@ export default {
 .mid-container {
   background: rgb(226, 226, 226);
   margin: 0;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 
 .mid-header {
   text-align: center;
+  letter-spacing: 0.2rem;
+  font-size: 4rem;
   margin: 0;
+  padding: 0;
+}
+
+.mid-sub-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  margin: 1rem 0 2rem 0;
   padding: 0;
 }
 
@@ -84,6 +95,11 @@ export default {
   width: 20rem;
   height: 50rem;
   margin: 1rem;
+}
+
+.card-number {
+  font-size: 2rem;
+  margin: 1rem 0 2rem 0;
 }
 
 
