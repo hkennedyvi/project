@@ -5,7 +5,7 @@
     <div class="box-container">
       <div v-bind:class="[inView ? 'box-second' : 'box-first']" v-on:click="test">
         <h1>OUR FOUNDER</h1>
-        <img class="box-image" src="../assets/defender.jpg" alt="">
+        <img class="box-image" src="../assets/founder.jpg" alt="">
       </div>
       <div v-bind:class="[inView ? 'box-fourth' : 'box-third']" v-on:click="test">
         <p class="box-copy">
