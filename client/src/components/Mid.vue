@@ -1,15 +1,17 @@
 <template>
   <div class="mid-container">
     <!-- <div class="mid-headers"> -->
-      <h1 class="mid-header">DESIGN FOR THE LONG HAUL</h1>
-      <h2 class="mid-sub-header">(Our Promise to You)</h2>
+    <h1 class="mid-header">DESIGN FOR THE LONG HAUL</h1>
+    <h2 class="mid-sub-header">(Our Promise to You)</h2>
     <!-- </div> -->
     <div class="cards-container">
       <div class="card">
-        <div class="card-number">01</div>
+        <div class="card-number">
+          <h5>01</h5>
+        </div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Safety</h2>
+          <h5 class="card-sub-header">Safety</h5>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -21,10 +23,12 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-number">02</div>
+        <div class="card-number">
+          <h5>02</h5>
+        </div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Style</h2>
+          <h5 class="card-sub-header">Style</h5>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -36,10 +40,12 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-number">03</div>
+        <div class="card-number">
+          <h5>03</h5>
+        </div>
         <img class="card-image" src="../assets/defender.jpg" />
         <div class="card-text">
-          <h2 class="card-sub-header">Speed</h2>
+          <h5 class="card-sub-header">Speed</h5>
           <p class="card-copy">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
@@ -80,7 +86,7 @@ export default {
   text-align: center;
   font-size: 1.8rem;
   font-style: italic;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 0 0;
   padding: 0;
 }
 
@@ -99,21 +105,21 @@ export default {
 
 .card-number {
   font-size: 2rem;
-  margin: 1rem 0 2rem 0;
 }
-
 
 .card-image {
   max-width: 100%;
   max-height: 100%;
 }
 
-.card-text, .card-number {
-    padding: 0 2rem;
+.card-text,
+.card-number {
+  padding: 0 2rem;
 }
 
 .card-sub-header {
-    font-size: 2rem;
+  font-size: 2rem;
+  margin: 2rem 0;
 }
 
 .card-copy {

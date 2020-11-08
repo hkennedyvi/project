@@ -49,6 +49,8 @@ export default {
   justify-content: center;
   border-radius: 1em;
   z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .navbar-open {

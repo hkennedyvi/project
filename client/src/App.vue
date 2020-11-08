@@ -34,6 +34,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 #app {
   background: red;
@@ -42,6 +43,10 @@ export default {
 
 body {
   margin: 0;
+}
+
+h1, h5 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 </style>
