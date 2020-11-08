@@ -1,13 +1,12 @@
 <template>
   <div class="bottom-container">
     BOTTOM
-    <button v-on:click="animateBox">CLICK</button>
     <div class="box-container">
-      <div v-bind:class="[inView ? 'box-second' : 'box-first']" v-on:click="test">
+      <div v-bind:class="[inView ? 'box-second' : 'box-first']">
         <h1>OUR FOUNDER</h1>
         <img class="box-image" src="../assets/founder.jpg" alt="">
       </div>
-      <div v-bind:class="[inView ? 'box-fourth' : 'box-third']" v-on:click="test">
+      <div v-bind:class="[inView ? 'box-fourth' : 'box-third']">
         <p class="box-copy">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -42,18 +41,23 @@ export default {
     };
   },
   methods: {
-    test() {
-      let position = window.scrollY;
-      if (position === 1794) {
-        this.inView = !this.inView;
-      } else {
-        console.log(position);
-      }
-    },
     animateBox() {
-      this.inView = !this.inView;
-      console.log("hello");
+      if (window.scrollY > 1400) {
+        this.inView = true;
+
+      } else if (window.scrollY < 1400) {
+        this.inView = false;
+      }
+      
     },
+  },
+  mounted: function () {
+    console.log("MOUNTED");
+    document.addEventListener('scroll', this.animateBox);
+  },
+  destroyed() {
+    console.log("DESTROYED");
+    document.removeEventListener('scroll', this.animateBox);
   },
 };
 </script>
@@ -84,33 +88,41 @@ export default {
 .box-first {
   height: 40rem;
   width: 40rem;
-  border: solid 1px white;
+  /* border: solid 1px white; */
   margin-left: 0;
-  transition: 700ms ease-in;
+  visibility: hidden;
+  opacity: 0;
+  transition: 900ms ease-in;
 }
 
 .box-second {
   height: 40rem;
   width: 40rem;
-  border: solid 1px white;
-  margin-left: 10%;
-  transition: 700ms ease-in;
+  /* border: solid 1px white; */
+  margin-left: 5%;
+  visibility: visible;
+  opacity: 1;
+  transition: 900ms ease-in;
 }
 
 .box-third {
   height: 40rem;
   width: 40rem;
-  border: solid 1px white;
+  /* border: solid 1px white; */
   margin-right: 0;
-  transition: 700ms ease-in;
+  visibility: hidden;
+  opacity: 0;
+  transition: 900ms ease-in;
 }
 
 .box-fourth {
   height: 40rem;
   width: 40rem;
-  border: solid 1px white;
-  margin-right: 10%;
-  transition: 700ms ease-in;
+  /* border: solid 1px white; */
+  margin-right: 5%;
+  visibility: visible;
+  opacity: 1;
+  transition: 900ms ease-in;
 }
 
 .test-color {
