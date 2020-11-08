@@ -8,13 +8,13 @@
     </button>
     <ul class="nav-list">
       <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close', 'nav-item']">
-        <a href>Here</a>
+        <a href>home</a>
       </li>
       <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close', 'nav-item']">
-        <a href>There</a>
+        <a href>about</a>
       </li>
       <li v-bind:class="[isOpen ? 'nav-item-open' : 'nav-item-close', 'nav-item']">
-        <a href>Anywhere</a>
+        <a href>contact</a>
       </li>
     </ul>
   </nav>
@@ -41,7 +41,7 @@ export default {
 .navbar {
   position: fixed;
   padding: 1rem;
-  width: 15vw;
+  width: 10vw;
   top: 3rem;
   right: 3rem;
   display: flex;
@@ -54,7 +54,7 @@ export default {
 }
 
 .navbar-open {
-  background: rgb(59, 59, 59);
+  /* background: rgb(59, 59, 59); */
   transition: 500ms ease-in;
 }
 
@@ -78,12 +78,12 @@ export default {
 }
 
 .button-open {
-  color: blue;
+  color: white;
   transition: 500ms ease-in;
 }
 
 .button-close {
-  color: red;
+  color: black;
   transform: rotate(-180deg);
   transition: 500ms ease-in;
 }
@@ -105,7 +105,8 @@ export default {
 }
 
 .nav-item {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  border-bottom: solid 2px white;
 }
 
 .nav-item:hover {
