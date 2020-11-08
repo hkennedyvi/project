@@ -7,6 +7,7 @@
     <Mid />
     <Bottom />
     <Final />
+    <Footer />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Main from './components/Main.vue';
 import Mid from './components/Mid.vue';
 import Bottom from './components/Bottom.vue';
 import Final from './components/Final.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -24,7 +26,8 @@ export default {
     Main,
     Mid,
     Bottom,
-    Final
+    Final,
+    Footer
   }
 }
 </script>
