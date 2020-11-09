@@ -150,7 +150,7 @@ export default {
   .bottom-container {
     background: rgb(32, 32, 32);
     color: white;
-    height: 140vh;
+    height: 160vh;
     width: 100vw;
   }
   .box-container {
@@ -169,7 +169,7 @@ export default {
   }
   .copy-box {
     align-items: center;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
   }
   .copy-box-start {
