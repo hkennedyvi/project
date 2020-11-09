@@ -6,16 +6,16 @@
         <img class="main-image" src="../assets/defender.jpg" />
       </div>
       <!-- <div> -->
-        <div class="gallery-controls">
-          <button>
-            <i class="fas fa-arrow-left"></i>
-          </button>
-          <button>
-            <i class="fas fa-arrow-right"></i>
-          </button>
-        </div>
-        <h1 class="header">we're glad you're here.</h1>
+      <div class="gallery-controls">
+        <button>
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <button>
+          <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
+      <h1 class="header">we're glad you're here.</h1>
+    </div>
     <!-- </div> -->
     <div class="right">2</div>
   </div>
@@ -26,9 +26,9 @@ export default {
   name: "Main",
   data() {
     return {
-      image : '../assets/defender.jpg'
+      image: "../assets/defender.jpg",
     };
-  }
+  },
 };
 </script>
 
@@ -39,7 +39,6 @@ export default {
   padding: 0;
   display: flex;
   height: 100vh;
-  /* background: lightslategrey; */
 }
 
 .left {
@@ -51,7 +50,6 @@ export default {
 .float-box {
   height: 60%;
   width: 70%;
-  /* border: solid 1px black; */
   position: absolute;
   left: 20%;
   top: 20%;
@@ -59,7 +57,6 @@ export default {
 }
 
 .pic-box {
-  /* border: solid 1px black; */
   width: 50%;
 }
 
@@ -98,5 +95,27 @@ export default {
 .right {
   background: rgb(105, 105, 105);
   flex: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+
+  .float-box {
+    flex-direction: column;
+  }
+
+  .pic-box {
+    width: 80%;
+  }
+
+  .gallery-controls {
+    width: 80%;
+  }
+
+  .header {
+    margin: 8rem 0 0 0;
+  }
 }
 </style>
