@@ -145,4 +145,12 @@ export default {
   line-height: 15rem;
   transition: 500ms ease-in;
 }
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    width: 15vw;
+    top: 1rem;
+    right: 1rem;
+  }
+}
 </style>
