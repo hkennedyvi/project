@@ -37,10 +37,18 @@ export default {
   },
   methods: {
     animateBox() {
-      if (window.scrollY > 1400) {
+      let position = window.scrollY;
+      let width = window.screen.width;
+      if (width > 600 && position > 1400) {
         this.inView = true;
-      } else if (window.scrollY < 1400) {
+      } else if (width > 600 && position < 1400) {
         this.inView = false;
+      } else if (width < 600 && position > 3200) {
+        console.log("animate")
+        this.inView = true;
+      } else if (width < 600 && position < 3200) {
+        this.inView = false;
+        console.log("unanimate")
       }
     },
   },
