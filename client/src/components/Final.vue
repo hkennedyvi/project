@@ -2,8 +2,10 @@
   <div class="final-container">
     <div class="final-content">
       <div v-bind:class="[inView ? 'start-container-second' : 'start-container-first']">
-        <h1>MODEL X</h1>
-        <h5>(signature series)</h5>
+        <div class="final-headers">
+          <h1>MODEL X</h1>
+          <h5>(signature series)</h5>
+        </div>
       </div>
       <div v-bind:class="[inView ? 'mid-container-second' : 'mid-container-first']">
         <img class="final-image" src="../assets/jeep.jpg" alt />
@@ -47,7 +49,7 @@ export default {
   destroyed() {
     console.log("DESTROYED");
     document.removeEventListener("scroll", this.animateBox);
-  }
+  },
 };
 </script>
 
@@ -136,5 +138,25 @@ export default {
 
 .final-copy {
   line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .final-content {
+    flex-direction: column;
+  }
+
+  .final-headers {
+    text-align: center;
+    margin: 0 0 4rem 0;
+  }
+
+  .mid-container-second {
+    width: 100vw;
+  }
+
+  .final-image {
+    height: 200px;
+    width: 50%;
+  }
 }
 </style>

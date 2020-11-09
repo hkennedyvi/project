@@ -137,4 +137,48 @@ export default {
   visibility: visible;
   opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .bottom-container {
+    background: rgb(32, 32, 32);
+    color: white;
+    height: 140vh;
+    width: 100vw;
+  }
+  .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-box {
+    height: 20rem;
+    width: 22rem;
+  }
+
+  .image-box-start {
+    margin-left: 20%;
+  }
+
+  .image-box-animated {
+    margin-left: 0%;
+  }
+
+  .copy-box {
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+  }
+
+  .copy-box-start {
+    margin-right: 20%;
+  }
+
+  .copy-box-animated {
+    margin-right: 0%;
+  }
+
+  .box-copy {
+    text-align: center;
+  }
+}
 </style>

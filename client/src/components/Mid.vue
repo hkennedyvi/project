@@ -125,9 +125,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-.mid-container {
-  padding: 6rem 0;
-}
+  .mid-container {
+    padding: 6rem 0;
+  }
   .cards-container {
     display: flex;
     flex-direction: column;
@@ -135,13 +135,13 @@ export default {
   }
 
   .card {
-  width: 20rem;
-  height: 50rem;
-  margin: 1rem 0 3rem 0;
-}
+    width: 20rem;
+    height: 50rem;
+    margin: 1rem 0 3rem 0;
+  }
 
   .mid-header {
- font-size: 2rem;
-}
+    font-size: 2rem;
+  }
 }
 </style>

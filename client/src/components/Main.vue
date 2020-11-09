@@ -1,6 +1,6 @@
 <template>
   <div class="main-container">
-    <div class="left">1</div>
+    <div class="leftside"></div>
     <div class="float-box">
       <div class="pic-box">
         <img class="main-image" src="../assets/defender.jpg" />
@@ -17,7 +17,7 @@
       <h1 class="header">we're glad you're here.</h1>
     </div>
     <!-- </div> -->
-    <div class="right">2</div>
+    <div class="rightside"></div>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ export default {
   height: 100vh;
 }
 
-.left {
+.leftside {
   background: white;
   flex: 1;
   position: relative;
@@ -92,7 +92,7 @@ export default {
   margin: 0 0 0 auto;
 }
 
-.right {
+.rightside {
   background: rgb(105, 105, 105);
   flex: 2;
 }
@@ -100,6 +100,10 @@ export default {
 @media only screen and (max-width: 600px) {
   .main-container {
     flex-direction: column-reverse;
+  }
+
+  .leftside {
+    background: rgb(145, 145, 145);
   }
 
   .float-box {
