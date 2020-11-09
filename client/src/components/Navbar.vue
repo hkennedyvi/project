@@ -1,6 +1,5 @@
 <template>
-  <!-- <nav v-bind:class="[isOpen ? 'navbar-open' : 'navbar-close', 'navbar']"> -->
-  <nav class="navbar">
+  <nav v-bind:class="[isOpen ? 'navbar-open' : 'navbar-close', 'navbar']">
     <button
       v-bind:class="[isOpen ? 'button-open' : 'button-close', 'button']"
       v-on:click="toggleNav"
@@ -69,6 +68,11 @@ export default {
   font-family: "Montserrat", sans-serif;
   color: white;
   background: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-close {
+  background: none;
+  transition: 500ms ease-in;
 }
 
 .test {
