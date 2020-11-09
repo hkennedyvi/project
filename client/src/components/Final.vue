@@ -2,15 +2,15 @@
   <div class="final-container">
     <div class="final-content">
       <div v-bind:class="[inView ? 'start-container-second' : 'start-container-first']">
-        <h1>HELLLLLO</h1>
-        <h5>it's me again</h5>
+        <h1>MODEL X</h1>
+        <h5>(signature series)</h5>
       </div>
       <div v-bind:class="[inView ? 'mid-container-second' : 'mid-container-first']">
         <img class="final-image" src="../assets/jeep.jpg" alt />
       </div>
       <div v-bind:class="[inView ? 'end-container-second' : 'end-container-first']">
-        <h5>01</h5>
-        <p>
+        <h5 class="final-number">01</h5>
+        <p class="final-copy">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -120,12 +120,21 @@ export default {
 }
 
 .end-container-second {
-  padding: 0 10rem 0 2rem;
+  padding: 0 5rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(0%);
   opacity: 1;
   transition: 900ms ease-in;
+}
+
+.final-number {
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+}
+
+.final-copy {
+  line-height: 1.5rem;
 }
 </style>
