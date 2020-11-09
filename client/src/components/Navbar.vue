@@ -1,5 +1,6 @@
 <template>
-  <nav v-bind:class="[isOpen ? 'navbar-open' : 'navbar-close', 'navbar']">
+  <!-- <nav v-bind:class="[isOpen ? 'navbar-open' : 'navbar-close', 'navbar']"> -->
+  <nav class="navbar">
     <button
       v-bind:class="[isOpen ? 'button-open' : 'button-close', 'button']"
       v-on:click="toggleNav"
@@ -32,6 +33,23 @@ export default {
     toggleNav() {
       this.isOpen = !this.isOpen;
     },
+    switchColor() {
+      let position = window.scrollY;
+      let els = document.getElementsByClassName("nav-item");
+      if (position > 500 && position < 1850) {
+        els.forEach((el) => el.classList.add("test"));
+      } else if (position > 1850 || (position > 0 && position < 500)) {
+        els.forEach((el) => el.classList.remove("test"));
+      }
+    },
+  },
+  mounted: function () {
+    console.log("MOUNTED");
+    document.addEventListener("scroll", this.switchColor);
+  },
+  destroyed() {
+    console.log("DESTROYED");
+    document.removeEventListener("scroll", this.switchColor);
   },
 };
 </script>
@@ -47,20 +65,19 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 1em;
   z-index: 1;
-  font-family: 'Montserrat', sans-serif;
-
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-open {
-  /* background: rgb(59, 59, 59); */
-  transition: 500ms ease-in;
+.test {
+  color: black !important;
+  border-bottom: solid 3px black !important;
 }
 
-.navbar-close {
-  background: transparent;
-  transition: 500ms ease-in;
+.test:hover {
+  background: white !important;
 }
 
 .button {
@@ -106,7 +123,7 @@ export default {
 
 .nav-item {
   font-size: 1rem;
-  border-bottom: solid 2px white;
+  border-bottom: solid 2px;
 }
 
 .nav-item:hover {
@@ -117,7 +134,6 @@ export default {
 .nav-item-open {
   transition: 500ms ease-in;
   line-height: 2rem;
-  color: white;
 }
 
 .nav-item-close {

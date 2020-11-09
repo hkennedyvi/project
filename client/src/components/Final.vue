@@ -33,7 +33,6 @@ export default {
   },
   methods: {
     animateBox() {
-      console.log(window.scrollY);
       if (window.scrollY > 2500) {
         this.inView = true;
       } else if (window.scrollY < 2800) {
@@ -48,7 +47,7 @@ export default {
   destroyed() {
     console.log("DESTROYED");
     document.removeEventListener("scroll", this.animateBox);
-  },
+  }
 };
 </script>
 
@@ -96,13 +95,13 @@ export default {
 .mid-container-first {
   width: 0px;
   padding: 0 2rem;
-  transition: 500ms ease-in;
+  transition: 900ms ease-in;
 }
 
 .mid-container-second {
   width: 3000px;
   padding: 0 2rem;
-  transition: 500ms ease-in;
+  transition: 900ms ease-in;
 }
 
 .final-image {
