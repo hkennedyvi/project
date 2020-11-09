@@ -44,11 +44,11 @@ export default {
       } else if (width > 600 && position < 1400) {
         this.inView = false;
       } else if (width < 600 && position > 3200) {
-        console.log("animate")
+        console.log("animate");
         this.inView = true;
       } else if (width < 600 && position < 3200) {
         this.inView = false;
-        console.log("unanimate")
+        console.log("unanimate");
       }
     },
   },
@@ -157,34 +157,27 @@ export default {
     flex-direction: column;
     align-items: center;
   }
-
   .image-box {
     height: 20rem;
     width: 22rem;
   }
-
   .image-box-start {
     margin-left: 20%;
   }
-
   .image-box-animated {
     margin-left: 0%;
   }
-
   .copy-box {
     align-items: center;
     height: 80vh;
     width: 100vw;
   }
-
   .copy-box-start {
     margin-right: 20%;
   }
-
   .copy-box-animated {
     margin-right: 0%;
   }
-
   .box-copy {
     text-align: center;
   }
