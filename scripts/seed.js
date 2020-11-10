@@ -10,8 +10,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const projectSeed = [
     {
-        title: 'Good Restaurant',
-        author: 'Howard Kennedy',
+        title: 'Model X',
+        author: 'Wercinzcki',
         date: new Date(Date.now())
     }
 ];
