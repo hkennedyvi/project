@@ -1,16 +1,18 @@
 <template>
   <div class="final-container">
     <div class="final-content">
-      <div v-bind:class="[inView ? 'first-container-animated' : 'first-container-start']">
+      <div
+        v-bind:class="[inView ? 'first-container-animated' : 'first-container-start', 'first-container']"
+      >
         <div class="final-headers">
           <h1>MODEL X</h1>
           <h5>(signature series)</h5>
         </div>
       </div>
       <div class="mid-container">
-        <div v-bind:class="[inView ? 'mid-content-animated' : 'mid-content-start']"></div>
+        <div v-bind:class="[inView ? 'mid-content-animated' : 'mid-content-start', 'mid-content']"></div>
       </div>
-      <div v-bind:class="[inView ? 'end-container-animated' : 'end-container-start']">
+      <div v-bind:class="[inView ? 'end-container-animated' : 'end-container-start', 'end-container']">
         <h5 class="final-number">01</h5>
         <p class="final-copy">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -64,34 +66,31 @@ export default {
   display: flex;
 }
 
-.first-container-start {
-  opacity: 0;
+.first-container {
   padding: 0 2rem 0 10rem;
   -webkit-transition: all 2000ms ease-in;
   -moz-transition: all 2000ms ease-in;
   -o-transition: all 2000ms ease-in;
   transition: all 2000ms ease-in;
+}
+
+.first-container-start {
+  opacity: 0;
 }
 
 .first-container-animated {
   opacity: 1;
-  padding: 0 2rem 0 10rem;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
 }
 
 .mid-container {
-  width: 1200px;
-  height: 700px;
+  width: 80vw;
+  height: 87vh;
   position: relative;
 }
 
-.mid-content-start {
+.mid-content {
   background: url("../assets/jeep.jpg");
   background-size: 1200px;
-  width: 0px;
   height: 700px;
   position: absolute;
   -webkit-transition: all 2000ms ease-in;
@@ -100,12 +99,19 @@ export default {
   transition: all 2000ms ease-in;
 }
 
+.mid-content-start {
+  width: 0;
+}
+
 .mid-content-animated {
-  background: url("../assets/jeep.jpg");
-  background-size: 1200px;
-  width: 1025px;
-  height: 700px;
-  position: absolute;
+  width: 73vw;
+}
+
+.end-container {
+  padding: 0 6rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   -webkit-transition: all 2000ms ease-in;
   -moz-transition: all 2000ms ease-in;
   -o-transition: all 2000ms ease-in;
@@ -113,29 +119,13 @@ export default {
 }
 
 .end-container-start {
-  padding: 0 10rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transform: translateY(80%);
   opacity: 0;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
 }
 
 .end-container-animated {
-  padding: 0 5rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transform: translateY(0%);
   opacity: 1;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
 }
 
 .final-number {
