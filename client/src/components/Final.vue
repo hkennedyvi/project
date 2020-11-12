@@ -43,11 +43,9 @@ export default {
     },
   },
   mounted: function () {
-    console.log("MOUNTED");
     document.addEventListener("scroll", this.animateBox);
   },
   destroyed() {
-    console.log("DESTROYED");
     document.removeEventListener("scroll", this.animateBox);
   },
 };

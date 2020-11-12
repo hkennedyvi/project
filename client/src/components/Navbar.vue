@@ -43,11 +43,9 @@ export default {
     },
   },
   mounted: function () {
-    console.log("MOUNTED");
     document.addEventListener("scroll", this.switchColor);
   },
   destroyed() {
-    console.log("DESTROYED");
     document.removeEventListener("scroll", this.switchColor);
   },
 };
