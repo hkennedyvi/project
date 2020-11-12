@@ -1,16 +1,16 @@
 <template>
   <div class="final-container">
     <div class="final-content">
-      <div v-bind:class="[inView ? 'start-container-second' : 'start-container-first']">
+      <div v-bind:class="[inView ? 'first-container-animated' : 'first-container-start']">
         <div class="final-headers">
           <h1>MODEL X</h1>
           <h5>(signature series)</h5>
         </div>
       </div>
-      <div v-bind:class="[inView ? 'mid-container-second' : 'mid-container-first']">
-        <img class="final-image" src="../assets/jeep.jpg" alt />
+      <div class="mid-container">
+        <div v-bind:class="[inView ? 'mid-content-animated' : 'mid-content-start']"></div>
       </div>
-      <div v-bind:class="[inView ? 'end-container-second' : 'end-container-first']">
+      <div v-bind:class="[inView ? 'end-container-animated' : 'end-container-start']">
         <h5 class="final-number">01</h5>
         <p class="final-copy">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     animateBox() {
-      if (window.scrollY > 2500) {
+      if (window.scrollY > 2600) {
         this.inView = true;
       } else if (window.scrollY < 2800) {
         this.inView = false;
@@ -66,69 +66,78 @@ export default {
   display: flex;
 }
 
-.start-container-first {
+.first-container-start {
   opacity: 0;
   padding: 0 2rem 0 10rem;
-  transition: 1100ms ease-in;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
-.start-container-second {
+.first-container-animated {
   opacity: 1;
   padding: 0 2rem 0 10rem;
-  transition: 1100ms ease-in;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
-/* .mid-container {
-  min-width: 400px;
-  padding: 0 2rem;
-}
-
-.final-image-first {
+.mid-container {
+  width: 1200px;
   height: 700px;
+  position: relative;
+}
+
+.mid-content-start {
+  background: url("../assets/jeep.jpg");
+  background-size: 1200px;
   width: 0px;
-  transition: 500ms ease-in;
-}
-
-.final-image-second {
   height: 700px;
-  width: 400px;
-  transition: 500ms ease-in;
-} */
-.mid-container-first {
-  width: 0px;
-  padding: 0 2rem;
-  transition: 900ms ease-in;
+  position: absolute;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
-.mid-container-second {
-  width: 3000px;
-  padding: 0 2rem;
-  transition: 900ms ease-in;
-}
-
-.final-image {
+.mid-content-animated {
+  background: url("../assets/jeep.jpg");
+  background-size: 1200px;
+  width: 1025px;
   height: 700px;
-  width: 100%;
+  position: absolute;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
-.end-container-first {
+.end-container-start {
   padding: 0 10rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(80%);
   opacity: 0;
-  transition: 900ms ease-in;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
-.end-container-second {
+.end-container-animated {
   padding: 0 5rem 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateY(0%);
   opacity: 1;
-  transition: 900ms ease-in;
+  -webkit-transition: all 2000ms ease-in;
+  -moz-transition: all 2000ms ease-in;
+  -o-transition: all 2000ms ease-in;
+  transition: all 2000ms ease-in;
 }
 
 .final-number {
@@ -137,6 +146,9 @@ export default {
 }
 
 .final-copy {
+  color: black;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
   line-height: 1.5rem;
 }
 
