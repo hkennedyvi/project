@@ -49,4 +49,12 @@ h1,
 h5 {
   font-family: "Montserrat", sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
 </style>

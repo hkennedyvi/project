@@ -10,16 +10,16 @@
       </div>
       <div class="icon-container">
         <a href>
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href>
+          <i class="fab fa-instagram"></i>
         </a>
         <a href>
           <i class="fab fa-twitter"></i>
         </a>
         <a href>
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href>
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
         </a>
       </div>
       <div>
@@ -68,6 +68,6 @@ export default {
   width: 50vw;
   display: flex;
   justify-content: space-evenly;
-  padding: 0 0 1rem 0;
+  margin: 2rem 0 0 0;
 }
 </style>

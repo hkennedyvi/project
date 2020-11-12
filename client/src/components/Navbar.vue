@@ -115,14 +115,6 @@ export default {
   padding: 0;
 }
 
-.nav-list a {
-  text-decoration: none;
-}
-
-.nav-list a:visited {
-  color: inherit;
-}
-
 .nav-item {
   font-size: 1rem;
   border-bottom: solid 2px;
