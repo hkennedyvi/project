@@ -151,8 +151,13 @@ export default {
 }
 
 @media only screen and (max-width: 760px) {
+  .final-container {
+    height: 75rem;
+  }
+
   .final-content {
     flex-direction: column;
+    align-items: center;
   }
 
   .final-headers {
@@ -160,13 +165,24 @@ export default {
     margin: 0 0 4rem 0;
   }
 
-  .mid-container-second {
+  .first-container-start {
+    padding: 0;
+  }
+
+  .first-container-animated {
+    padding: 0;
+  }
+
+  .mid-container {
     width: 100vw;
   }
 
-  .final-image {
-    height: 200px;
-    width: 50%;
+  .mid-content-start {
+    width: 0;
+  }
+
+  .mid-content-animated {
+    width: 100vw;
   }
 }
 </style>
