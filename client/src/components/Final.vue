@@ -150,7 +150,7 @@ export default {
   line-height: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .final-content {
     flex-direction: column;
   }

@@ -124,7 +124,7 @@ export default {
   line-height: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .mid-container {
     padding: 6rem 0;
   }

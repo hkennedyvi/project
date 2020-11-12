@@ -67,6 +67,12 @@ export default {
   background: rgb(32, 32, 32);
   color: white;
   height: 100vh;
+  /* text-overflow: ellipsis; */
+
+  /* Required for text-overflow to do anything */
+  /* white-space: nowrap; */
+  overflow: hidden;
+
 }
 
 .box-container {
@@ -144,7 +150,7 @@ export default {
   opacity: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .bottom-container {
     background: rgb(32, 32, 32);
     color: white;

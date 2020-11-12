@@ -181,7 +181,7 @@ export default {
   flex: 2;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .main-container {
     flex-direction: column-reverse;
   }

@@ -144,7 +144,7 @@ export default {
   transition: 500ms ease-in;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 760px) {
   .navbar {
     width: 15vw;
     top: 1rem;
