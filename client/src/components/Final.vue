@@ -119,7 +119,7 @@ export default {
 }
 
 .end-container-start {
-  transform: translateY(80%);
+  transform: translateY(20%);
   opacity: 0;
 }
 
