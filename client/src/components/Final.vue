@@ -68,10 +68,10 @@ export default {
 
 .first-container {
   padding: 0 2rem 0 10rem;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
+  -webkit-transition: all 1000ms ease-in;
+  -moz-transition: all 1000ms ease-in;
+  -o-transition: all 1000ms ease-in;
+  transition: all 1000ms ease-in;
 }
 
 .first-container-start {
@@ -93,10 +93,10 @@ export default {
   background-size: 1200px;
   height: 700px;
   position: absolute;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
+  -webkit-transition: all 1000ms ease-in;
+  -moz-transition: all 1000ms ease-in;
+  -o-transition: all 1000ms ease-in;
+  transition: all 1000ms ease-in;
 }
 
 .mid-content-start {
@@ -112,10 +112,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  -webkit-transition: all 2000ms ease-in;
-  -moz-transition: all 2000ms ease-in;
-  -o-transition: all 2000ms ease-in;
-  transition: all 2000ms ease-in;
+  -webkit-transition: all 1000ms ease-in;
+  -moz-transition: all 1000ms ease-in;
+  -o-transition: all 1000ms ease-in;
+  transition: all 1000ms ease-in;
 }
 
 .end-container-start {
