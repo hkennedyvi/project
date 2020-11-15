@@ -4,8 +4,8 @@
       <div class="leftside">
         <div>
           <h1>OUR OFFICE</h1>
-          <p>1 789 233 4990</p>
-          <p>1 789 233 4990</p>
+          <p>Main Street - 1 789 233 4990</p>
+          <p>2nd Ave - 1 789 233 4990</p>
         </div>
         <div>
           <h1>JW</h1>
@@ -15,15 +15,10 @@
       <div class="rightside">
         <h1>CONTACT US</h1>
         <form class="contact-form" action>
-          <!-- <label class="contact-label" for="">Name: -->
           <input class="contact-input" type="text" placeholder="FULL NAME" />
-          <!-- </label> -->
-          <!-- <label for="">Email: -->
           <input class="contact-input" type="text" placeholder="EMAIL" />
-          <!-- </label> -->
-          <!-- <label class="contact-label" for="">Message:</label> -->
-          <textarea class="contact-textarea" name id cols="30" rows="10" placeholder="MESSAGE"></textarea>
-          <input class="contact-submit" type="submit" />
+          <textarea class="contact-textarea" name id cols="30" rows="6" placeholder="MESSAGE"></textarea>
+          <input class="contact-submit" type="submit" v-on:click="submitForm" />
         </form>
       </div>
     </div>
@@ -33,6 +28,11 @@
 <script>
 export default {
   name: "Contact",
+  methods: {
+    submitForm(e) {
+      e.preventDefault();
+    },
+  },
 };
 </script>
 
@@ -110,5 +110,9 @@ export default {
   color: black;
   align-self: flex-start;
   border: solid white 1px;
+}
+
+.contact-submit:hover {
+  cursor: pointer;
 }
 </style>
