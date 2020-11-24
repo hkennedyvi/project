@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "dev": "concurrently \"nodemon server/index.js\" \"cd client && npm run serve\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "dev": "concurrently \"nodemon server/index.js\" \"cd client && npm run serve\""
   },
   "repository": {
     "type": "git",
