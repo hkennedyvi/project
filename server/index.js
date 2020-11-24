@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -14,7 +14,11 @@ app.use(cors());
 
 app.use(routes);
 
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+};
+
+if (process.env.NODE_ENV === 'production') {
     app.use(express.static(__dirname + '/public/'));
 
     app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
